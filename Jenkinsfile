@@ -1,6 +1,8 @@
 import groovy.json.JsonSlurper
 pipeline{  
-  agent any
+  agent { 
+      label 'jenkins-k8s-slave' 
+        } 
   stages{
       stage('build project')
       {
